@@ -6,39 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-
-    <script>
-    //Exercício 1
-        //Parte 1
-        let escope = escopo => {
-            let ifScope;
-            let elseScope;
-            if (escopo === true) { 
-                ifScope = `Não devo ser utilizada fora do meu escopo (if)`;
-                ifScope = ifScope + `ótimo, fui utilizada no escopo !`;
-                console.log(ifScope);
-            } else {
-                elseScope = `Não devo ser utilizada fora meu escopo (else)`;
-                console.log(elseScope);
-            }
-                console.log(`${ifScope} o que estou fazendo aqui ? :O`); // Se necessário esta linha pode ser removida.
-        }
-        console.log(escope(true));
-
-        //Parte 2
-        const oddsAndEvens = [13, 3, 4, 10, 7, 2];
-        const ordered = (a, b) => {
-            return a - b;
-        };
-
-        oddsAndEvens.sort(ordered);
-        console.log(`os números ${oddsAndEvens} se encontram ordenados de forma crescente!`);
-
-        
-        
-    //Exercício 2
-        //Parte 1
-
-    </script>
+    <button id="button">Clique aqui</button>
+    <div id="section"></div>
+    <script src="script.js"></script>
 </body>
 </html>
