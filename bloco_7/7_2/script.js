@@ -53,6 +53,10 @@ const order = {
   
   orderModifier(order);
 
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 //Parte 2
 const lesson1 = {
     materia: 'Matemática',
@@ -73,7 +77,37 @@ const lesson1 = {
     professor: 'Maria Clara',
     turno: 'noite',
   };
-
-  const addLesson = (objeto, chave, valor) => {objeto[chave] = valor};
-  addLesson(lesson2, 'turno', 'manhã');
-  console.log(lesson2);
+    //1
+    const addLesson = (objeto, chave, valor) => {objeto[chave] = valor};
+    addLesson(lesson2, 'turno', 'manhã');
+    console.log(lesson2);
+    //2
+    const objectKeys = object => {console.log(Object.keys(object))};
+    objectKeys(lesson3);
+    //3
+    const objectLength = object => {console.log(Object.keys(object).length)}
+    objectLength(lesson2);
+    //4
+    const objectValues = object => {console.log(Object.values(object))}
+    objectValues(lesson1);
+    //5 
+    const allLessons = Object.assign({}, {lesson1, lesson2, lesson3} ) 
+    console.log(allLessons);
+    //6 
+    const nLesson1 = Object.values(allLessons.lesson1)[1];
+    const nLesson2 = Object.values(allLessons.lesson2)[1];
+    const nLesson3 = Object.values(allLessons.lesson2)[1];
+    const sumOfStudents = nLesson1 + nLesson2 + nLesson3;
+    console.log(sumOfStudents);
+    //7
+    const getValueByNumber = (object, position) => {
+        Object.values(object[position]);
+    }
+    console.log(getValueByNumber(lesson1, 0));
+    //8
+    const verifyPair = (object, key, value) => {
+        if (object[key] === value) {
+            return true;
+        }
+        return false;
+    }; 
