@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+            <div id="primeiroFilho"></div>
+            <div id="elementoOndeVoceEsta">
+                <div id="primeiroFilhoDoFilho"></div>
+                <div id="segundoEUltimoFilhoDoFilho"></div>
+            </div>
+            <p>Atenção!</p>
+            <div id="terceiroFilho"></div>
+            <div id="quartoEUltimoFilho"></div>
+        </div>
+    </div>
+    <script> 
+        //1 
+        let elementoOndeVoceEsta = document.querySelector('#pai').children[1];
+        console.log(elementoOndeVoceEsta);
+        //2
+        elementoOndeVoceEsta.style.backgroundColor = 'blue'
+        //3
+        let primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
+        console.log(primeiroFilhoDoFilho.innerText = 'texto teste');
+        //4
+        console.log(document.querySelector('#pai').children[0]);
+        //5
+        console.log(elementoOndeVoceEsta.previousElementSibling);
+        //6
+        console.log(elementoOndeVoceEsta.nextElementSibling);
+        //7
+        console.log(elementoOndeVoceEsta.nextElementSibling.nextElementSibling)
+        //8
+        console.log(pai.children[3]);
+
+        //PARTE 2
+        //1
+        let irmão = document.createElement('div');
+        pai.appendChild(irmão);
+        //2 
+        elementoOndeVoceEsta.appendChild(irmão);
+        //3
+        primeiroFilhoDoFilho.appendChild(irmão);
+    </script>
+
+</body>
+
+</html>
