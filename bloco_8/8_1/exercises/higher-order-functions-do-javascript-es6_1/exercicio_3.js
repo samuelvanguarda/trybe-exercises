@@ -49,7 +49,12 @@ const books = [
       name: 'Stephen King',
       birthYear: 1947
     },
-    releaseYear: 1986,;
+    releaseYear: 1986,
+  },
+  {
+    id: 6,
+    name: 'O Chamado de Cthulhu',
+    genre: 'Terror',
     author: {
       name: 'H. P. Lovecraft',
       birthYear: 1890,
@@ -58,9 +63,19 @@ const books = [
   },
 ];
 
-function authorBornIn1947() {
-  return books.find(object => object.author.birthYear === 1947).author.name;
-}
-authorBornIn1947();
+const expectedResult = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin'
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991
+};
 
-assert.strictEqual(authorBornIn1947(), 'Stephen King');
+function getNamedBook() {
+  return books.find(Object => Object.name.length === 26)
+}
+
+assert.deepStrictEqual(getNamedBook(), expectedResult);
